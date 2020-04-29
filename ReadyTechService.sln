@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReadyTechService", "ReadyTech.Axis.Service\ReadyTech.Axis.Service.csproj", "{29C1D3FD-F0BF-426E-A651-1C0D7D7BDBDA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReadyTechService.Tests", "ReadyTech.Axis.Service.Tests\ReadyTech.Axis.Service.Tests.csproj", "{ACB55691-B785-4760-8278-E7C85FAD3862}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29C1D3FD-F0BF-426E-A651-1C0D7D7BDBDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29C1D3FD-F0BF-426E-A651-1C0D7D7BDBDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29C1D3FD-F0BF-426E-A651-1C0D7D7BDBDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29C1D3FD-F0BF-426E-A651-1C0D7D7BDBDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACB55691-B785-4760-8278-E7C85FAD3862}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACB55691-B785-4760-8278-E7C85FAD3862}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACB55691-B785-4760-8278-E7C85FAD3862}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACB55691-B785-4760-8278-E7C85FAD3862}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E29EA15E-F77E-440B-BBA0-B3ED8AE89DAB}
+	EndGlobalSection
+EndGlobal
