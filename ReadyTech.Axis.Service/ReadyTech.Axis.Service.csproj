@@ -6,6 +6,7 @@
     <Company>Occam Video Solutions</Company>
     <Description>A c# SDK wrapper for ReadyTech.Axis APIs</Description>
     <PackageTags>ReadyTech, Axis</PackageTags>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

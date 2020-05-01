@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace ReadyTech.Axis.Service
 {
-    public class ReadyTechService
+    public class ReadyTechService : IReadyTechService
     {
         private readonly IRestClient _Client;
         private const string BaseUrl = "https://axis-api.readytech.com/v1";
