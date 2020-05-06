@@ -39,7 +39,7 @@ namespace ReadyTech.Axis.Service.Models
         public Schedule[] Schedule { get; set; }
 
         [JsonProperty("description")]
-        public object Description { get; set; }
+        public string Description { get; set; }
 
         [JsonProperty("seatCount")]
         public long SeatCount { get; set; }

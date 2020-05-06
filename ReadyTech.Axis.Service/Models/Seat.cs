@@ -30,13 +30,13 @@ namespace ReadyTech.Axis.Service.Models
         public string AssignedEmail { get; set; }
 
         [JsonProperty("activatedTs")]
-        public object ActivatedTs { get; set; }
+        public string ActivatedTs { get; set; }
 
         [JsonProperty("activatedFirstName")]
-        public object ActivatedFirstName { get; set; }
+        public string ActivatedFirstName { get; set; }
 
         [JsonProperty("activatedLastName")]
-        public object ActivatedLastName { get; set; }
+        public string ActivatedLastName { get; set; }
 
         [JsonProperty("seatUrl")]
         public Uri SeatUrl { get; set; }

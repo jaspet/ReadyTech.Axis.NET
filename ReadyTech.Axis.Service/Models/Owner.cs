@@ -9,7 +9,7 @@ namespace ReadyTech.Axis.Service.Models
         public Guid? Uuid { get; set; }
 
         [JsonProperty("externalId")]
-        public object ExternalId { get; set; }
+        public string ExternalId { get; set; }
 
         [JsonProperty("firstName")]
         public string FirstName { get; set; }
