@@ -6,10 +6,10 @@ namespace ReadyTech.Axis.Service.Models
     public class UpdateEvent
     {
         [JsonProperty("startDate")]
-        public DateTimeOffset StartDate { get; set; }
+        public string StartDate { get; set; }
 
         [JsonProperty("endDate")]
-        public DateTimeOffset EndDate { get; set; }
+        public string EndDate { get; set; }
 
         [JsonProperty("providerRegion")]
         public ProviderRegion ProviderRegion { get; set; }

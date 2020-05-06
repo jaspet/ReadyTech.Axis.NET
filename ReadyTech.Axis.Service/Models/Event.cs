@@ -38,11 +38,28 @@ namespace ReadyTech.Axis.Service.Models
         [JsonProperty("schedule")]
         public Schedule[] Schedule { get; set; }
 
+        public DateTime StartDate
+        {
+            get
+            {
+                DateTime.TryParse(StartDateText, out DateTime result);
+                return result;
+            }
+        }
+        public DateTime EndDate
+        {
+            get
+            {
+                DateTime.TryParse(EndDateText, out DateTime result);
+                return result;
+            }
+        }
+
         [JsonProperty("startDate")]
-        public DateTimeOffset StartDate { get; set; }
+        public string StartDateText { get; set; }
 
         [JsonProperty("endDate")]
-        public DateTimeOffset EndDate { get; set; }
+        public string EndDateText { get; set; }
 
         [JsonProperty("attendees")]
         public Attendee[] Attendees { get; set; }

@@ -65,8 +65,8 @@ namespace ReadyTech.Axis.Service
 
             UpdateEvent updateEvent = new UpdateEvent
             {
-                StartDate = dates.First(),
-                EndDate = dates.Last(),
+                StartDate = eventToUpdate.StartDateText,
+                EndDate = eventToUpdate.EndDateText,
                 ProviderRegion = eventToUpdate.ProviderRegion,
                 Name = eventToUpdate.Name,
                 ExternalId = eventToUpdate.ExternalId,
