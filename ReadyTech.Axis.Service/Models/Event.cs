@@ -64,6 +64,9 @@ namespace ReadyTech.Axis.Service.Models
         [JsonProperty("attendees")]
         public Attendee[] Attendees { get; set; }
 
+        [JsonProperty("attendeeCount")]
+        public long AttendeeCount { get; set; }
+
         [JsonProperty("description")]
         public string Description { get; set; }
 
