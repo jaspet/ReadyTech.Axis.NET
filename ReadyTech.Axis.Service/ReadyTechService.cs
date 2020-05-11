@@ -94,9 +94,9 @@ namespace ReadyTech.Axis.Service
             return JsonConvert.DeserializeObject<Event>(response.Content);
         }
 
-        public List<EventResponse> GetAllEvents()
+        public List<EventResponse> GetAllEvents(Scope scope)
         {
-            IRestRequest request = new RestRequest($"events", Method.GET, DataFormat.Json);
+            IRestRequest request = new RestRequest($"events?Scope={scope.GetDescription()}&subentities=true", Method.GET, DataFormat.Json);
             IRestResponse response = _Client.Get(request);
             if (response.IsSuccessful)
             {
@@ -127,9 +127,9 @@ namespace ReadyTech.Axis.Service
             return response.IsSuccessful;
         }
 
-        public List<Seat> GetSeatsForEvent(Guid eventUuid)
+        public List<Seat> GetSeatsForEvent(Guid eventUuid, Scope scope)
         {
-            IRestRequest request = new RestRequest($"events/{eventUuid}/seats", Method.GET, DataFormat.Json);
+            IRestRequest request = new RestRequest($"events/{eventUuid}/seats?Scope={scope.GetDescription()}", Method.GET, DataFormat.Json);
             IRestResponse response = _Client.Get(request);
             if (response.IsSuccessful)
             {
@@ -142,6 +142,30 @@ namespace ReadyTech.Axis.Service
         {
             IRestRequest request = new RestRequest($"seats/{seatUuid}", Method.GET, DataFormat.Json);
             IRestResponse response = _Client.Get(request);
+            if (response.IsSuccessful)
+            {
+                return JsonConvert.DeserializeObject<Seat>(response.Content);
+            }
+            return null;
+        }
+
+        public Seat CreateSeat(Seat newSeat, string templateUUID)
+        {
+            if (newSeat is null)
+            {
+                throw new ArgumentNullException(nameof(newSeat));
+            }
+            UpdateSeat updateSeat = new UpdateSeat
+            {
+                Email = newSeat.AssignedEmail,
+                FirstName = newSeat.AssignedFirstName,
+                LastName = newSeat.AssignedLastName,
+                ExternalId = newSeat.ExternalId
+            };
+
+            IRestRequest request = new RestRequest($"events/{templateUUID}/seats", Method.POST, DataFormat.Json);
+            request.AddBody(JsonConvert.SerializeObject(updateSeat));
+            IRestResponse response = _Client.Post(request);
             if (response.IsSuccessful)
             {
                 return JsonConvert.DeserializeObject<Seat>(response.Content);
